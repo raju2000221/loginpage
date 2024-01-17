@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
+}
+
+.main_container {
+    height: 60vh;
+    width: 120vh;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background-color: #ffffff;
+}
+
+.grid_container1 {
+    background-image: url(image/login.PNG);
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+}
+
+.grid_container2 {
+    font-family: 'Mulish', sans-serif;
+}
+
+.log_title {
+    margin-left: 30px;
+    color: #7A999C;
+    font-size: 50px;
+}
+
+.sub_h1 {
+    color: #567281;
+    font-weight: 400;
+}
+
+.log_sign {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.login {
+    margin-right: 20px;
+    border-bottom: 3px solid #567281;
+    padding-bottom: 3px;
+    color: #567281;
+    text-decoration: none;
+
+}
+
+.sign {
+    color: #C1CCD3;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+.password {
+    position: relative;
+}
+
+.fa-eye-slash {
+    position: absolute;
+    top: 30%;
+    right: 125px;
+    cursor: pointer;
+    color: #4B687A;
+}
+
+.email_field,
+.password_field {
+    display: block;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #567281;
+    width: 60%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.email_field {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+input::placeholder {
+    color: #A7B7C1;
+    font-size: 20px;
+}
+
+.or,
+.link {
+    text-align: center;
+}
+
+.or {
+    color: #A7B7C1;
+}
+
+.btn {
+    display: block;
+    margin: 30px auto auto auto;
+    width: 60%;
+    padding: 10px;
+    background-color: #4B687A;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.google,
+.facebbok {
+    margin: auto 25px auto 25px;
+    height: 40px;
+    width: 40px;
+}
