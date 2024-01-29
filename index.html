@@ -5,40 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+
     <main class="main_container">
         <div class="grid_container1">
 
         </div>
         <div class="grid_container2">
-            <h1><span class="log_title">Hello</span><span class="sub_h1">, Guyss!</span></h1>
+            <h1 class="hello"><span class="log_title">Hello</span><span class="sub_h1">, Guyss!</span></h1>
+
             <div class="log_sign">
                 <a class="login" href="#">Login</a>
                 <a class="sign" href="#">SignUp</a>
+                <div id="alart" class="alart"></div>
+                <div id="success" class="success"></div>
             </div>
-
-            <form class="login_field" action="">
-                <input class="email_field" placeholder="Enter your email" type="email">
-                <div class="password">
-                    <input class="password_field " placeholder="Enter Password" type="password">
-                    <i class="fa fa-eye-slash"></i>
+            <form id="form" class="login_field" action="">
+                <div class="rel_email">
+                    <input id="email" class="email_field" placeholder="Enter your email" type="email">
+                    <div id="val_email" class="style_email" >
+                      
+                        <p class=" val_email_pass1  invalid"><span class="x"></span>Enter valid email address</p>
+                        <!-- <p class=" val_email_pass2  invalid"><span class="x"></span>Enter valid email address</p> -->
+                        
+                    </div>
                 </div>
-                <input class="btn" type="submit" value="Login">
+                <div class="password">
+                    <input id="password" class="password_field " placeholder="Enter Password" type="password">
+                    <img id="show_p" class="fa-eye-slash" src="image/eye-slash-solid.svg" alt="" srcset="">
+                    <div id="val_pass" class="style_pass">
+                      
+                        <p class=" val_email_pass3  invalid"><span class="x"></span>Password have at lest one A_Z one 0_1 one sp character</p>
+                        <p class=" val_email_pass4  invalid"><span class="x"></span>Password at lest 8 character</p>
+                        <p class=" val_email_pass5  invalid"><span class="x"></span>Password less then 16 character</p>
+                        <!-- <p class=" val_email_pass6  invalid"><span class="x"></span>Password more then 8 character</p> -->
+                    </div>
+                    <!-- <image class="fa "></i> -->
+                </div>
+                    
+                    <button disabled id="btn"  class="btn">Login</button>
+            
             </form>
 
             <p class="or">Or</p>
 
             <div class="link">
                 <a href="3"><img class="google" src="image/google-icon.png" alt="google"></a>
-                <a href="#"><img class="facebbok" src="image/facebook.jpg" alt="facebbok"></a>
+                <a href="#"><img class="facebbok" src="image/fb.png" alt="facebbok"></a>
             </div>
 
         </div>
     </main>
-    <script src="https://kit.fontawesome.com/4dec63f9a8.js" crossorigin="anonymous"></script>
+    <script src="validation.js"></script>
 </body>
 
 </html>

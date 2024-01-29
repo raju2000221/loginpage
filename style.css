@@ -1,55 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500&display=swap');
-
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    margin: auto;
+    margin: 0;
 }
 
 .main_container {
-    height: 60vh;
-    width: 120vh;
+    height: 100%;
+    width: auto;
     display: grid;
     grid-template-columns: 45% 55%;
     background-color: #ffffff;
 }
 
 .grid_container1 {
+    height: 100vh;
     background-image: url(image/login.PNG);
-    border-top-right-radius: 5%;
-    border-top-left-radius: 5%;
+    border-radius: 3%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid_container2 {
+    height: 100vh;
     font-family: 'Mulish', sans-serif;
 }
 
+.hello {
+    margin: 100px auto auto 70px;
+}
+
 .log_title {
-    margin-left: 30px;
+    font-family: 'Ubuntu', sans-serif;
     color: #7A999C;
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .sub_h1 {
     color: #567281;
+    font-size: 50px;
     font-weight: 400;
 }
 
 .log_sign {
+   position: relative;
     text-align: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 45px;
+    margin-top: 70px;
+    margin-bottom: 130px;
 }
 
+.alart {
+    position: absolute;
+    top: 160%;
+    margin-left: 26%;
+    width: 45%;
+    background-color: rgba(214, 58, 58, 0.604);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none;
+}
+.success{
+    position: absolute;
+    top: 160%;
+    margin-left: 26%;
+    width: 45%;
+    background-color: rgba(13, 74, 1, 0.593);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none;
+}
 .login {
     margin-right: 20px;
     border-bottom: 3px solid #567281;
     padding-bottom: 3px;
     color: #567281;
     text-decoration: none;
-
 }
 
 .sign {
@@ -61,13 +93,97 @@ body {
 .password {
     position: relative;
 }
+.valid {
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.val_email_pass1,
+.val_email_pass2,
+.val_email_pass3,
+.val_email_pass4,
+.val_email_pass5{
+  
+    position: relative;
+    padding-left: 20px;
+   
+}
+
+.x {
+    background: url("/image/x-solid.svg") no-repeat;
+    width: 20px;
+    height: 20px;  
+    display: inline-block;
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.check{
+    background: url("/image/check-solid.svg") no-repeat;
+    width: 20px;
+    height: 20px;  
+    display: inline-block;
+    position: absolute;
+    left: 1px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.invalid {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: line-through;
+    padding-left: 20px;
+    
+}
+.rel_email{
+    position: relative;
+}
+.style_email{
+    position: absolute;
+    top: 127%;
+    margin-left: 27.5%;
+    width: 45%;
+    background-color: #ebebebdf;
+    padding: 5px 10px;
+    text-align: center;
+    /* border: 1px solid #616161cb ; */
+    display: none;
+    border-radius: 5px;
+    
+
+
+}
+
+.style_pass{
+    position: absolute;
+    top: 127%;
+    margin-left: 26.5%;
+    width: 45%;
+    background-color: #ebebebdf;
+    /* border: 1px solid #616161cb ; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    display: none;
+    
+
+
+}
 
 .fa-eye-slash {
     position: absolute;
-    top: 30%;
-    right: 125px;
+    top: 10px;
+    right: 27%;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
-    color: #4B687A;
+    color: #4B687A !important;
+
 }
 
 .email_field,
@@ -76,20 +192,29 @@ body {
     margin: auto;
     border: none;
     outline: none;
+    background-color: transparent;
     border-bottom: 3px solid #567281;
-    width: 60%;
+    width: 45%;
     padding: 5px;
     font-size: 20px;
 }
 
 .email_field {
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 input::placeholder {
     color: #A7B7C1;
     font-size: 20px;
+}
+.Successful {
+    text-align: center;
+    background-color: rgb(113, 164, 3);
+    width: 45%;
+    margin: auto auto 20px auto;
+    padding: 10px;
+    display: none;
+    border-radius: 5px;
 }
 
 .or,
@@ -99,12 +224,26 @@ input::placeholder {
 
 .or {
     color: #A7B7C1;
+    font-size: 25px;
 }
 
 .btn {
     display: block;
-    margin: 30px auto auto auto;
-    width: 60%;
+    margin: 60px auto 30px auto;
+    width: 46%;
+    padding: 10px;
+    background-color: #c0ced6cb;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.btn_enable{
+    display: block;
+    margin: 60px auto 30px auto;
+    width: 46%;
     padding: 10px;
     background-color: #4B687A;
     border: none;
@@ -116,7 +255,88 @@ input::placeholder {
 
 .google,
 .facebbok {
-    margin: auto 25px auto 25px;
+    margin: 30px 25px auto 25px;
     height: 40px;
     width: 40px;
+}
+
+/* responsive */
+@media only screen and (max-width: 600px) {
+    .style_pass{
+        width:70% ;
+        margin-left: 14%;
+        background-color: #a3a2a2df;
+        font-size: 15px;
+        padding: 5px ;
+    }
+    .style_email{
+        width:70% ;
+        margin-left: 13%;
+        background-color: #a3a2a2df;
+        font-size: 15px;
+    }
+    .main_container {
+        grid-template-columns: 0% 100%;
+    }
+
+    .grid_container2 {
+        background: linear-gradient(rgba(255, 249, 249, 0.856), rgba(255, 252, 252, 0.856)), url('image/login.PNG');
+        background-size: cover;
+    }
+
+    .hello {
+        margin: 70px auto auto 30px;
+    }
+
+    .log_title {
+
+        font-size: 40px;
+    }
+
+    .sub_h1 {
+        color: #567281;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .log_sign {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .email_field,
+    .password_field {
+        width: 70%;
+        background-color: transparent;
+    }
+
+    .fa-eye-slash {
+
+        right: 15%;
+    }
+
+    .email_field {
+        margin-bottom: 40px;
+    }
+
+    .email_vaL_1,
+    .email_vaL_2,
+    .pass_vaL_1,
+    .pass_vaL_2,
+    .Successful{
+        width: 70%;
+    }
+    .alart,
+    .success {
+        position: fixed;
+        top: 1%; 
+        left: -16%;
+        width: 70%;
+     
+    }
+    
+    .btn {
+        width: 73%;
+        margin: 40px auto 30px auto;
+    }
 }
